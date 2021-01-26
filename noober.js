@@ -4,9 +4,9 @@ async function pageLoaded() {
 
   // writes the returned JSON to the console
   console.dir(json)
-  
+
   // 🔥 start here: write code to loop through the rides
-  
+
 }
 
 window.addEventListener('DOMContentLoaded', pageLoaded)
