@@ -6,8 +6,10 @@ async function pageLoaded() {
   console.dir(json)
 
   // 🔥 start here: write code to loop through the rides
-
+  for (let i = 0; i < json.length; i++) {
+    let ride = json[i]
+    console.log(ride[0].passengerDetails.first);
+  }
 }
-// testing
 
 window.addEventListener('DOMContentLoaded', pageLoaded)
