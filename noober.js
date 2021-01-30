@@ -20,13 +20,13 @@ async function pageLoaded() {
   for (let i = 0; i < json.length; i++) {   // calling the arrays
     let ride = json[i]
 
-    // let levelOfService = "testing level of service"
-    // let passengerNumberOfPassengers = ride.numberOfPassengers
+    let levelOfService = "testing level of service"
 
     for (let l = 0; l < ride.length; l++) { // calling the legs
       let leg = ride[l]
 
       // Setting variables
+      let passengerNumberOfPassengers = leg.numberOfPassengers
       let passengerName = `${leg.passengerDetails.first} ${leg.passengerDetails.last}`
       let passengerPhone = leg.passengerDetails.phoneNumber
       let passengerPickupAddressLine1 = leg.pickupLocation.address
@@ -34,6 +34,7 @@ async function pageLoaded() {
       let passengerDropoffAddressLine1 = leg.dropoffLocation.address
       let passengerDropoffAddressLine2 = `${leg.dropoffLocation.city}, ${leg.dropoffLocation.state} ${leg.dropoffLocation.zip}`
 
+      console.log(passengerNumberOfPassengers);
       console.log(passengerName);
       console.log(passengerPhone);
       console.log(passengerPickupAddressLine1);
