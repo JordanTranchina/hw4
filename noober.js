@@ -7,7 +7,7 @@ async function pageLoaded() {
 
   // declaring variables
   // let levelOfService = "testing level of service"
-  // let passengerName = `${passengerDetails.first} ${passengerDetails.last}`
+  // let passengerName = `${leg.passengerDetails.first} ${leg.passengerDetails.last}`
   // let passengerPhone = passengerDetails.phoneNumber
   // let passengerNumberOfPassengers = numberOfPassengers
   // let passengerPickupAddressLine1 = pickupLocation.address
@@ -16,27 +16,39 @@ async function pageLoaded() {
   // let passengerDropoffAddressLine2 = `${dropoffLocation.city}, ${dropoffLocation.state} ${dropoffLocation.zip}`
 
 
-  // print number of passengers
-  for (let i = 0; i < json.length; i++) {
+
+  for (let i = 0; i < json.length; i++) {   // calling the arrays
     let ride = json[i]
 
-    // define level of service
-    if (ride.length > 1) {   // if length of ride is > 1 then level of service = Noober Pool
-      levelOfService = "Noober Pool"
-      console.log(`${[i]} - ${ride.length} - ${levelOfService}`); // printing ride#, ride length, and level of service for each ride
+    for (let l = 0; l < ride.length; l++) { // calling the legs
+      // console.log([l]);
+      let leg = ride[l]
+      let passengerName = `${leg.passengerDetails.first} ${leg.passengerDetails.last}`
 
-    } else if (ride.purpleRequested == true) {   // if purpleRequest = true, then level of service = Noober Purple = always 1
-      levelOfService = "Noober Purple"
-      console.log(`${[i]} - ${ride.length} - ${levelOfService}`); // printing ride#, ride length, and level of service for each ride
+      console.log(passengerName);
 
-    } else if (ride.numberOfPassengers > 3) {    // if number of total people is > 3, then level of service = Noober XL
-      levelOfService = "Noober XL"
-      console.log(`${[i]} - ${ride.length} - ${levelOfService}`); // printing ride#, ride length, and level of service for each ride
-
-    } else {
-      levelOfService = "Noober X"
-      console.log(`${[i]} - ${ride.length} - ${levelOfService}`); // printing ride#, ride length, and level of service for each ride
     }
+
+
+    // let rideleg = json[i][l]
+    // // define level of service
+    // // need to loop twice to get down to ride level 2 to determine purple requested and number of passengers
+    // if (ride.length > 1) {   // if length of ride is > 1 then level of service = Noober Pool
+    //   levelOfService = "Noober Pool"
+    //   console.log(`${[i]} - ${ride.length} - ${levelOfService}`); // printing ride#, ride length, and level of service for each ride
+
+    // } else if (ride.purpleRequested == true) {   // if purpleRequest = true, then level of service = Noober Purple = always 1
+    //   levelOfService = "Noober Purple"
+    //   console.log(`${[i]} - ${ride.length} - ${levelOfService}`); // printing ride#, ride length, and level of service for each ride
+
+    // } else if (ride.numberOfPassengers > 3) {    // if number of total people is > 3, then level of service = Noober XL
+    //   levelOfService = "Noober XL"
+    //   console.log(`${[i]} - ${ride.length} - ${levelOfService}`); // printing ride#, ride length, and level of service for each ride
+
+    // } else {
+    //   levelOfService = "Noober X"
+    //   console.log(`${[i]} - ${ride.length} - ${levelOfService}`); // printing ride#, ride length, and level of service for each ride
+    // }
 
   }
 
@@ -45,8 +57,11 @@ async function pageLoaded() {
   // 🔥 start here: write code to loop through the rides
 
 
-
-
+  // inital checker that worked
+  // console.log(`array# ${[i]}, leg# ${[l]}`);
+  // console.log(leg);
+  // console.log(leg.passengerDetails.first);
+  // console.log(`${leg.passengerDetails.first} ${leg.passengerDetails.last}`);
 
 
 
