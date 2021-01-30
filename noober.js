@@ -20,12 +20,27 @@ async function pageLoaded() {
   for (let i = 0; i < json.length; i++) {   // calling the arrays
     let ride = json[i]
 
+    // let levelOfService = "testing level of service"
+    // let passengerNumberOfPassengers = ride.numberOfPassengers
+
     for (let l = 0; l < ride.length; l++) { // calling the legs
-      // console.log([l]);
       let leg = ride[l]
+
+      // Setting variables
       let passengerName = `${leg.passengerDetails.first} ${leg.passengerDetails.last}`
+      let passengerPhone = leg.passengerDetails.phoneNumber
+      let passengerPickupAddressLine1 = leg.pickupLocation.address
+      let passengerPickupAddressLine2 = `${leg.pickupLocation.city}, ${leg.pickupLocation.state} ${leg.pickupLocation.zip}`
+      let passengerDropoffAddressLine1 = leg.dropoffLocation.address
+      let passengerDropoffAddressLine2 = `${leg.dropoffLocation.city}, ${leg.dropoffLocation.state} ${leg.dropoffLocation.zip}`
 
       console.log(passengerName);
+      console.log(passengerPhone);
+      console.log(passengerPickupAddressLine1);
+      console.log(passengerPickupAddressLine2);
+      console.log(passengerDropoffAddressLine1);
+      console.log(passengerDropoffAddressLine2);
+      console.log("--------------------------------");
 
     }
 
@@ -51,62 +66,6 @@ async function pageLoaded() {
     // }
 
   }
-
-
-
-  // 🔥 start here: write code to loop through the rides
-
-
-  // inital checker that worked
-  // console.log(`array# ${[i]}, leg# ${[l]}`);
-  // console.log(leg);
-  // console.log(leg.passengerDetails.first);
-  // console.log(`${leg.passengerDetails.first} ${leg.passengerDetails.last}`);
-
-
-
-
-
-
-
-
-  // Pass over top level array and judge how long the length is (for loop)
-  // for (let i = 0; i < json.length; i++) {
-  //   let ride = json[i]
-  //   console.log(ride.length);
-  //   console.log(`${[i]} - ${ride[1].passengerDetails.first}`);
-  // }
-
-  // if length is 3 then for loop over each ride
-  // else - go back to the initial top level array for loop
-
-  // if length is 2 then for loop over each ride
-  // else - go back to the initial top level array for loop
-
-  // if length is 1 then for loop over each ride
-  // else - go back to the initial top level array for loop
-
 }
 
 window.addEventListener('DOMContentLoaded', pageLoaded)
-
-
-// passengerDetails: {
-//   first: "Thad",
-//     last: "Farrell",
-//       phoneNumber: "(989) 614-4016"
-// },
-// pickupLocation: {
-//   address: "551 W Elm St",
-//     city: "Chicago",
-//       state: "IL",
-//         zip: "60612"
-// },
-// dropoffLocation: {
-//   address: "2550 S Wabash Ave",
-//     city: "Chicago",
-//       state: "IL",
-//         zip: "60614"
-// },
-// numberOfPassengers: 1,
-//   purpleRequested: false
