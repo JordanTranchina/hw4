@@ -75,14 +75,7 @@ async function pageLoaded() {
 
       } else if (leg.purpleRequested == true) {   // if purpleRequest = true, then level of service = Noober Purple = always 1
         levelOfService = "Noober Purple"
-        console.log(levelOfService);
-        console.log(passengerNumberOfPassengers);
-        console.log(passengerName);
-        console.log(passengerPhone);
-        console.log(passengerPickupAddressLine1);
-        console.log(passengerPickupAddressLine2);
-        console.log(passengerDropoffAddressLine1);
-        console.log(passengerDropoffAddressLine2);
+
 
         // PRINTING
         let outputElement = document.querySelector(".rides")
@@ -124,14 +117,7 @@ async function pageLoaded() {
 
       } else if (leg.numberOfPassengers > 3) {    // if number of total people is > 3, then level of service = Noober XL
         levelOfService = "Noober XL"
-        console.log(levelOfService);
-        console.log(passengerNumberOfPassengers);
-        console.log(passengerName);
-        console.log(passengerPhone);
-        console.log(passengerPickupAddressLine1);
-        console.log(passengerPickupAddressLine2);
-        console.log(passengerDropoffAddressLine1);
-        console.log(passengerDropoffAddressLine2);
+
 
         // PRINTING
         let outputElement = document.querySelector(".rides")
@@ -173,14 +159,7 @@ async function pageLoaded() {
 
       } else {                                    // else Noober X
         levelOfService = "Noober X"
-        console.log(levelOfService);
-        console.log(passengerNumberOfPassengers);
-        console.log(passengerName);
-        console.log(passengerPhone);
-        console.log(passengerPickupAddressLine1);
-        console.log(passengerPickupAddressLine2);
-        console.log(passengerDropoffAddressLine1);
-        console.log(passengerDropoffAddressLine2);
+
 
         // PRINTING
         let outputElement = document.querySelector(".rides")
@@ -227,13 +206,3 @@ async function pageLoaded() {
 
 
 window.addEventListener('DOMContentLoaded', pageLoaded)
-
-
-// console.log(levelOfService);
-// console.log(passengerNumberOfPassengers);
-// console.log(passengerName);
-// console.log(passengerPhone);
-// console.log(passengerPickupAddressLine1);
-// console.log(passengerPickupAddressLine2);
-// console.log(passengerDropoffAddressLine1);
-// console.log(passengerDropoffAddressLine2);
