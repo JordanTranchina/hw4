@@ -5,7 +5,7 @@ async function pageLoaded() {
   // writes the returned JSON to the console
   console.dir(json)
 
-  for (let i = 0; i < json.length; i++) {   // calling arrays
+  for (let i = 0; i < json.length; i++) {   // calling rides
     let ride = json[i]
 
     // declaring variable
@@ -26,17 +26,7 @@ async function pageLoaded() {
       // RIDE LEVEL - LOGGING
       if (ride.length > 1) {                      // if length of ride is > 1 then level of service = Noober Pool
         levelOfService = "Noober Pool"
-        console.log(levelOfService);
-        console.log(passengerNumberOfPassengers);
-        console.log(passengerName);
-        console.log(passengerPhone);
-        console.log(passengerPickupAddressLine1);
-        console.log(passengerPickupAddressLine2);
-        console.log(passengerDropoffAddressLine1);
-        console.log(passengerDropoffAddressLine2);
-
-        // PRINTING
-        let outputElement = document.querySelector(".rides")
+        let outputElement = document.querySelector(".rides")         // PRINTING
         outputElement.insertAdjacentHTML("beforeend",
           `
             <h1
@@ -75,10 +65,7 @@ async function pageLoaded() {
 
       } else if (leg.purpleRequested == true) {   // if purpleRequest = true, then level of service = Noober Purple = always 1
         levelOfService = "Noober Purple"
-
-
-        // PRINTING
-        let outputElement = document.querySelector(".rides")
+        let outputElement = document.querySelector(".rides")        // PRINTING
         outputElement.insertAdjacentHTML("beforeend",
           `
             <h1
@@ -117,10 +104,7 @@ async function pageLoaded() {
 
       } else if (leg.numberOfPassengers > 3) {    // if number of total people is > 3, then level of service = Noober XL
         levelOfService = "Noober XL"
-
-
-        // PRINTING
-        let outputElement = document.querySelector(".rides")
+        let outputElement = document.querySelector(".rides")        // PRINTING
         outputElement.insertAdjacentHTML("beforeend",
           `
             <h1
@@ -159,10 +143,7 @@ async function pageLoaded() {
 
       } else {                                    // else Noober X
         levelOfService = "Noober X"
-
-
-        // PRINTING
-        let outputElement = document.querySelector(".rides")
+        let outputElement = document.querySelector(".rides")        // PRINTING
         outputElement.insertAdjacentHTML("beforeend",
           `
             <h1
