@@ -94,15 +94,15 @@ async function pageLoaded() {
               <span>${levelOfService}</span>
             </h1>
 
-            <div class="border-4 border-gray-900 p-4 my-4 text-left">
+            <div class="border-4 border-purple-500 p-4 my-4 text-left">
               <div class="flex">
                 <div class="w-1/2">
                   <h2 class="text-2xl py-1">${passengerName}</h2>
                   <p class="font-bold text-gray-600">${passengerPhone}</p>
                 </div>
                 <div class="w-1/2 text-right">
-                  <span class="rounded-xl bg-gray-600 text-white p-2">
-                  ${passengerNumberOfPassengers} passengers
+                  <span class="rounded-xl bg-purple-600 text-white p-2">
+                    ${passengerNumberOfPassengers} passengers
                   </span>
                 </div>
               </div>
@@ -114,7 +114,7 @@ async function pageLoaded() {
                 </div>
                 <div class="w-1/2">
                   <div class="text-sm font-bold text-gray-600">DROPOFF</div>
-                  <p>${passengerDropoffAddressLine1}</p>
+                  <p>${passengerDropoffAddressLine2}</p>
                   <p>${passengerDropoffAddressLine2}</p>
                 </div>
               </div>
@@ -227,3 +227,13 @@ async function pageLoaded() {
 
 
 window.addEventListener('DOMContentLoaded', pageLoaded)
+
+
+// console.log(levelOfService);
+// console.log(passengerNumberOfPassengers);
+// console.log(passengerName);
+// console.log(passengerPhone);
+// console.log(passengerPickupAddressLine1);
+// console.log(passengerPickupAddressLine2);
+// console.log(passengerDropoffAddressLine1);
+// console.log(passengerDropoffAddressLine2);
